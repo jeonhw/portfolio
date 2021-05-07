@@ -114,6 +114,43 @@ var swiper = new Swiper('.swiper-container.designer', {
     }
 });
 
+//designer info
+
+
+
+$(document).ready(function(){
+    $(".sec.designer .swiper-container.designer .dg.one").click(function(){
+        $(".dsinfo.one").toggleClass("on");
+    });
+});
+
+$(document).ready(function(){
+    $(".sec.designer .swiper-container.designer .dg.two").click(function(){
+        $(".dsinfo.two").toggleClass("on");
+    });
+});
+
+$(document).ready(function(){
+    $(".sec.designer .swiper-container.designer .dg.three").click(function(){
+        $(".dsinfo.three").toggleClass("on");
+    });
+});
+
+$(document).ready(function(){
+    $(".sec.designer .swiper-container.designer .dg.four").click(function(){
+        $(".dsinfo.four").toggleClass("on");
+    });
+});
+
+$(document).ready(function(){
+    $(".sec.designer .swiper-container.designer .dg.five").click(function(){
+        $(".dsinfo.five").toggleClass("on");
+    });
+});
+
+
+
+
 //book
 var swiper = new Swiper('.swiper-container.reflections', {
     slidesPerView: 2,

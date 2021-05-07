@@ -1038,6 +1038,31 @@ div.sec.reflections .txt {
 
 /* sec designer */
 
+
+div.dsinfo{
+    /* display: none;/ */
+    transition: all 1s;
+    font-weight: 100;
+    font-size: 1rem;
+    padding: 0 8%;
+    height: 0px;;
+    transform: translateY(800px);
+    opacity: 0.4;
+}
+
+
+div.dsinfo.on{
+    display: flex;
+    flex-direction: column;
+    transition: all 1s;
+    /* height: 300px;/ */
+    transform: translateY(0px);
+    transition: all 1.7s ease;
+    opacity: 1;
+}
+
+
+
 div.sec.designer .txt {
     display: flex;
     align-items: center;
@@ -1090,13 +1115,18 @@ div.sec.designer{
     height: 100vh;
     width: 25%;
 }
+
+
+
+
+
         .sec.designer .swiper-container.designer .dg.one{
             background: url(../images/luise/arne-jacobsen-550x750.jpg) 50% 50%
             no-repeat;
             background-size: cover;
         }
         .sec.designer .swiper-container.designer .dg.two{
-            background: url(../images/luise/christian-flindt-550x750.jpg) 50% 50%
+            background: url(../images/luise/jakob-lange-big-ideas-louis-poulsen.jpg) 50% 50%
             no-repeat;
             background-size: cover;
         }
@@ -1110,8 +1140,8 @@ div.sec.designer{
             no-repeat;
             background-size: cover;
         }
-        .sec.designer .swiper-container.designer li:nth-child(5){
-            background: url(../images/luise/shoichi-uchiyama-550x750.jpg) 50% 50%
+        .sec.designer .swiper-container.designer .dg.five{
+            background: url(../images/luise/mads-odgard-550x750.jpg) 50% 50%
             no-repeat;
             background-size: cover;
         }
@@ -1141,6 +1171,7 @@ div.sec.designer{
     }
     
     div.bgcolor{
+        cursor: pointer;
         height:100%;
         color: white;
         background: rgba(0, 0, 0, 0.5);
@@ -1152,10 +1183,7 @@ div.sec.designer{
         border-right: 0.5px solid white;
     }
 
-    .sec.designer .swiper-container.designer .dg:hover div.bgcolor,.div.learnmore{
-        background:transparent;
-        transition: all 2s ease;
-    }
+
 
     .sec.designer .swiper-container.designer .dg:hover{
         width: 25%;
