@@ -1,0 +1,1525 @@
+@charset "UTF-8";
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+:root
+{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    width:100%;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    /* border: 1px solid lightcyan; */
+}
+
+
+
+.bg .popup {
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    margin: -350px 0 0 -300px;
+    background: #fff;
+    box-shadow: 0px 20px 50px rgb(0 0 0 / 30%);
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+}
+
+
+.bg .popup .ic_close{
+    font-size: 2rem;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: block;
+    cursor: pointer;
+}
+.bg .popup .ic_main{
+    font-size: 6rem;
+    margin: 0 0 20px 0;
+}
+.bg .popup h5{
+    margin: 20px 0 0 0;
+    color: salmon
+}
+.bg .popup form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 0 0;
+}
+.bg .popup form label{ display: none; }
+.bg .popup form a, 
+.bg .popup form a:visited{ 
+    text-decoration: none;
+    color: #444;
+    display: block;
+    margin: 0 0 0 10px;
+}
+.bg .popup form.mail{
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 50px 0 0 0;
+}
+.bg .popup form.mail input{
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    margin: 0 0 10px 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    border: 1px solid #d9d9d9;
+}
+.bg .popup form.mail textarea{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin: 0 0 10px 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    border: 1px solid #d9d9d9;
+    resize: none;
+}
+
+
+div.sec{height: 100vh;}
+
+body{
+    min-width: 1080px; 
+    position: relative;
+}
+
+header.inner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.swiper-slide.main.one{
+    background: url(../images/luise/header_BG.png)50% 50% no-repeat; 
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.swiper-slide.main.two{
+    background: url(../images/luise/header6.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+
+.swiper-slide.main.three{
+    background: url(../images/luise/header5.png) 50% 50% no-repeat;
+    width: 100%;
+    background-size: cover;
+    height: 100vh;
+}
+
+.swiper-slide.main.four{
+    background: url(../images/luise/header10.png) 50% 50% no-repeat;
+    width: 100%;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+.swiper-wrapper.header{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  
+
+}
+
+div.drop{
+    background: url(../images/luise/9830_22408_PH-4-3-Pendant-01-2-5-90290.png);
+    position: absolute;
+    top: 0;
+}
+
+header nav ul li a{
+display:inline-block;
+flex-direction: row;
+text-decoration: none;
+color: white;
+font-size: 3rem;
+opacity: 0.75;
+transition: opacity 0.2 ease;
+}
+
+header nav ul li a:hover{
+    opacity: 1;
+}
+
+@keyframes fadeInLeft{
+    0% {opacity: 0; transform: translateX(-25%);}
+    100% {opacity: 1; transform: translateX(0);}
+}
+
+header div.logo {
+    background: url(../images/luise/15450075135410.png) 50% 50% no-repeat;
+    position: absolute;
+    width: 147px;
+    height: 74px;
+    display: block;
+    top: 2rem;
+    left: 2rem;
+    z-index: 10;
+    background-size: cover;
+}
+
+header nav{
+    display:flex;
+    flex-direction: row;
+    color: white;
+    width: 611px;
+    height: 31px;
+}
+
+.swiper-slide.main div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.swiper-slide.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 14%;
+    
+}
+
+.swiper-slide.main>div p{
+    font-size: 3.6rem;
+    color: white;
+    font-weight: 200;
+    text-align-last: left;
+    line-height: 4.5rem;
+}
+
+.swiper-slide.main>div span{
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 100;
+    text-align-last: left;
+    padding-top: 30px;
+}
+
+
+
+.swiper-container.header{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide.header {
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+/* header */
+
+
+
+/* ham */
+.hamburger-button {
+    position: absolute;
+    transition: .3s ease-in-out;
+    width: 45px;
+    height: 34px;
+    display: block;
+    top: 2rem;
+    right: 2rem;
+    z-index: 100;
+}
+
+    .hamburger-button span {
+        position: absolute;
+        height: 2px;
+        border-radius: 4px;
+        width: 100%;
+        background-color: white;
+        top: 0;
+        transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+    }
+
+        .hamburger-button span:nth-child(1) {
+            top: 0px;
+        }
+
+        .hamburger-button span:nth-child(2),
+        .hamburger-button span:nth-child(3) {
+            top: 13px;
+        }
+
+        .hamburger-button span:nth-child(4) {
+            top: 26px;
+        }
+
+    .hamburger-button.active span {
+        background-color: #FFF;
+    }
+
+        .hamburger-button.active span:nth-child(1),
+        .hamburger-button.active span:nth-child(4) {
+            opacity: 0;
+        }
+
+        .hamburger-button.active span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        .hamburger-button.active span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+header .overlay{
+    position: fixed;
+    background: #000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.overlay.visible{
+    height: 100%;
+    opacity: 0.97;
+    visibility: visible;
+    z-index: 10;
+}
+
+
+header nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* padding: 50% 0%; */
+    text-align: left;
+    
+}
+
+header nav ul li{
+display:inline-block;
+flex-direction: row;
+text-decoration: none;
+color: white;
+font-weight: 200;
+margin: 1rem 0;
+opacity: 0;}
+
+.overlay.visible nav ul li{
+    animation:fadeInLeft 0.3s ease
+    forwards;
+}
+.overlay.visible nav ul li:nth-child(1){
+    animation-delay: 0.26s;
+}
+.overlay.visible nav ul li:nth-child(2){
+    animation-delay: 0.32s;
+}
+.overlay.visible nav ul li:nth-child(3){
+    animation-delay: 0.38s;
+}
+.overlay.visible nav ul li:nth-child(4){
+    animation-delay: 0.44s;
+}
+.overlay.visible nav ul li:nth-child(5){
+    animation-delay: 0.50s;
+}
+.overlay.visible nav ul li:nth-child(6){
+    animation-delay: 0.56s;
+}
+
+/* ham */
+
+/* sec 01 */
+
+
+div.sec{
+    width: 100%;}
+
+div.sec.one {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec.one .inner,
+.sec.productinfo .inner{
+    display: flex;
+    margin: 0 auto;
+    width: 1527px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+/*  */
+div.sec.one .txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.sec.four div.txt,
+.sec.three div.txt{
+    color: #3a3a3a;
+    /* height: 100%; */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* / */
+
+p.title_l{
+    font-size: 3.0rem;
+    padding:0 0 10px 0;
+    font-weight: 500;
+    color: #535353;}
+
+.title_s{
+    font-size: 0.8rem;
+    color: #B6A286;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    /* padding-bottom: 10px; */
+}
+
+div.sec span 
+/* 긴 글 */
+{
+    font-weight: 100;
+    color:#121212;
+}
+
+.sec .learnmore{
+    width: 172px;
+    height: 43px;
+    text-align: center;
+    align-content: center;
+    border: 1px solid #B6A286;
+    line-height: 43px;
+    margin-top: 20px;
+}
+
+.sec .learnmore > a{
+
+    text-align: center;
+    align-content: center;
+    color: #B6A286;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+div.logo{
+    background:
+    url(../images/luise/15450075135410.png)
+    50% 50% no-repeat;
+    background-size: cover;
+    position: absolute;
+    display: block;
+    top: 2rem;
+    right: 2rem;
+    z-index: 100;
+}
+
+div.sec.one .imgsec{
+    flex-wrap: wrap;
+    width: 788px;
+    height: 868px;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+}
+
+div.sec.one .imgsec div{
+    width: 384px;
+    height: 424px;
+    }
+
+.swiper-container.first{
+    height: 553px;
+    }
+
+.swiper-container.first .swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    border-radius: 1%;
+    cursor: pointer;
+}
+
+.swiper-container.first .swiper-slide.zero{
+    background: url(../images/luise/panthella_verner-panton-tableperfect_size_550x750.jpg) 50% 50% no-repeat ;
+    background-size: cover;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.swiper-container.first .swiper-slide.one{
+    background: url(../images/luise/garden_top_2100x900.jpg) 50% 50% no-repeat ;
+    background-size: cover;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.swiper-container.first .swiper-slide.two{
+    background: url(../images/luise/2017-11-10-louis-poulsen-04-43921_rgb.jpg) 50% 50% no-repeat ;
+    background-size: cover;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.swiper-container.first .swiper-slide.three{
+    background: url(../images/luise/ph-septima-poul-henningsen-lamp-louispoulsen2.jpg) 50% 50% no-repeat ;
+    background-size: cover;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.swiper-container.first .swiper-slide.four{
+    background: url(../images/luise/pantella_mini.jpg) 50% 50% no-repeat ;
+    background-size: cover;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.swiper-container.first .swiper-slide.five{
+    background: url(../images/luise/artichoke-1075x750.jpg) 50% 50% no-repeat ;
+    background-size: cover;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.sec.one .solidtxt{
+    background: #B09D85;
+    color: white;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 0 20px;
+    border-bottom-left-radius: 1%;
+    border-bottom-right-radius: 1%;
+}
+
+.sec.one .swiper-slide.one .solidtxt,
+.sec.one .swiper-slide.four .solidtxt{
+    background: #f7f7f7;
+    color: #414141;
+}
+
+.sec.one .solidtxt li:nth-child(1){
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+.sec.one .solidtxt li:nth-child(2){
+    font-weight: 100;
+    font-size: 0.9rem;
+    padding-top: 10px;
+}
+
+
+/* div.sec.one .imgsec div:active{
+opacity: 0.6;
+} */
+
+/* div.sec.one .imgsec div:nth-child(2),
+div.sec.one .imgsec div:nth-child(4){
+margin-left: 20px;
+}
+
+div.sec.one .imgsec div:nth-child(1)
+{
+margin-bottom: 20px;
+background: url(../images/luise/sec01_1.png) 50% 50%
+no-repeat;
+background-size: cover;}
+
+div.sec.one .imgsec div:nth-child(2)
+{
+margin-bottom: 20px;
+background: url(../images/luise/sec01_2.png) 50% 50%
+no-repeat;
+background-size: cover;}
+
+div.sec.one .imgsec div:nth-child(3)
+{
+margin-bottom: 20px;
+background: url(../images/luise/sec01_3.png) 50% 50%
+no-repeat;
+background-size: cover;}
+
+div.sec.one .imgsec div:nth-child(4)
+{
+margin-bottom: 20px;
+background: url(../images/luise/sec01_4.png) 50% 50%
+no-repeat;
+background-size: cover;} */
+
+
+header> span {
+    position: absolute;
+    left: 32%;
+    top: 25%;
+    width: 10%;
+    margin-top: -30%;
+    opacity: 0;
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+
+/* sec 01 */
+
+
+/* ================================== */
+
+/* 2 */
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;}
+
+div.sec.productinfo{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    background: url(../images/luise/header13.png)50%50% no-repeat;
+    background-size: cover;
+    position: sticky;
+}
+
+div.sec.productinfo .txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-top: 100px;
+}
+
+div.sec.productinfo p.title_l{
+    color: white;}
+
+
+div.sec.productinfo span 
+/* 긴 글 */
+{
+    font-weight: 100;
+    color:white;
+}
+
+.swiper-container.second {
+    width: 1527px;
+    height: 70vh;
+
+}
+
+.swiper-container.productinfo .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* background: #fff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.sec.productinfo .swiper-slide span{
+    color: white;
+    width: 50%;
+    text-align: left;
+    height: 100%;
+    padding-bottom: 30px;
+}
+
+div.sec.productinfo .swiper-slide div.photo {
+    background-size: cover;
+    width: 60%;
+    height: 100%;
+}
+
+div.sec.productinfo .swiper-slide.zero div.photo {
+    background: url(../images/luise/wire2.png) 50% 50% no-repeat;
+}
+
+div.sec.productinfo .swiper-slide.one div.photo {
+    background: url(../images/luise/pendent.png) 50% 50% no-repeat;
+    shape-rendering: crispEdges;
+}
+
+div.sec.productinfo .swiper-slide.two div.photo {
+    background: url(../images/luise/aj.png) 50% 50% no-repeat;
+}
+
+div.sec.productinfo .swiper-slide.three div.photo {
+    background: url(../images/luise/wall.png) 50% 50% no-repeat;
+}
+
+div.sec.productinfo .swiper-slide.four div.photo {
+    background: url(../images/luise/long.png) 50% 50% no-repeat;
+}
+
+div.sec.productinfo .swiper-slide.five div.photo {
+    background: url(../images/luise/black.png) 50% 50% no-repeat;
+}
+
+div.sec.productinfo .swiper-slide.six div.photo {
+    background: url(../images/luise/10875_10875_PH-35-25-Table-white-01-2-5-91660.png) 50% 50% no-repeat;
+}
+
+div.sec.productinfo .swiper-slide.seven div.photo {
+    background: url(../images/luise/10129_14460_PH-Artichoke-Steel-480-03A-2-5-90145.png)50% 50% no-repeat;
+}
+
+
+
+
+
+
+
+
+
+div .colorbt span {
+    font-size: 0.9rem;
+}
+div .colorbt {
+    border: 0.5px solid rgb(255, 255, 255);
+    border-radius: 150px;
+    width: 150px;
+    /* margin: 20px 0; */
+    height: 30px;
+    line-height: 42px;
+    font-size: 0.9rem;
+    color: white;
+    /* padding: 0 20px; */
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background: white;
+    justify-content: center;
+}
+
+div.colorbt div{
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    display: inline-block;}
+
+div.colorbt.one div{
+    background:#ffffff;
+    }
+    
+div.colorbt.two div{
+    background:#ffffff;
+    }
+
+div.colorbt.three div:nth-child(3){
+    background: rgb(163, 52, 39);
+}
+div.colorbt.three div:nth-child(2){
+    background: rgb(192, 195, 204)
+}
+div.colorbt.three div:nth-child(4){
+    background: rgb(255, 255, 255);
+}
+div.colorbt.three div:nth-child(5){
+    background: rgb(68, 44, 70);
+}
+div.colorbt.four div:nth-child(3){
+    background: rgb(0, 0, 0);
+}
+
+div.colorbt p{
+    margin-right: 10px;
+    color: black;
+}
+
+div.colorbt.five div:nth-child(3){
+    background: rgb(0, 0, 0);
+}
+
+div.colorbt.six div:nth-child(3){
+    background: rgb(255, 30, 0);
+}
+
+div.colorbt.seven div:nth-child(2){
+    background: rgb(174, 173, 171);
+}
+div.colorbt.seven div:nth-child(3){
+    background: rgb(218, 202, 117);
+}
+div.colorbt.seven div:nth-child(4){
+    background: rgb(180, 129, 102);
+}
+div.colorbt.seven div:nth-child(5){
+    background: black;
+}
+
+
+
+
+
+
+
+div.info{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+div.info span:nth-child(1) {
+    font-size: 2.4rem;
+    align-items: center;
+    display: flex;
+    font-weight: normal;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    align-items: center;
+}
+
+
+div.swiper-button-next,
+div.swiper-button-prev{
+    color: white;
+}
+
+
+
+
+
+
+/* sec ref- */
+
+div.sec.reflections .txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+.sec.reflections {
+    /* display: flex; */
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sec.reflections .inner {
+    width:1527px;
+    /* display: block; */
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.swiper-container.reflections {
+    /* width: 100%; */
+    height: 529px;
+}
+
+.sec.reflections div.swiper-slide.bk.one{
+    background:url(../images/luise/reflections1_550x750.jpg)
+    50% 50% no-repeat;
+    background-size: cover;
+}
+.sec.reflections div.swiper-slide.bk.two{
+    background:url(../images/luise/reflections2_550x750.jpg)
+    50% 50% no-repeat;
+    background-size: cover;
+}
+.sec.reflections div.swiper-slide.bk.three{
+    background:url(../images/luise/reflections3_550x750.jpg)
+    50% 50% no-repeat;
+    background-size: cover;
+}
+.sec.reflections div.swiper-slide.bk.four{
+    background:url(../images/luise/reflections4_550x750.jpg)
+    50% 50% no-repeat;
+    background-size: cover;
+}
+.sec.reflections div.swiper-slide.bk.five{
+    background:url(../images/luise/reflections5_550x750.jpg)
+    50% 50% no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+/* ------------------------------------------------ */
+
+
+.imgsec2 div ul li:nth-child(3){
+    display: none;
+}
+
+.sec.two .imgpxsec2 div:hover ul li:nth-child(3){
+    display: block;
+}
+
+
+
+.imgsec2 div ul li:nth-child(1){
+    font-weight: 200;
+    font-size: 3rem;
+}
+
+.imgsec2 div ul li:nth-child(2){
+    font-weight: 200;
+    font-size: 3rem;
+    padding-bottom: 20%;
+    /* padding-top: 100px;
+    padding-bottom: 272px; */
+}
+
+
+.imgsec2{
+    background: url(../images/luise/마스크\ 그룹\ 41.png) 50% 50%
+    no-repeat;
+    background-size: cover;
+}
+
+.imgsec2 div:nth-child(1)
+{
+    /* background: url(../images/luise/sec02-1.png)
+    50% 50% no-repeat; */
+    background:rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    border-right: 1px solid white;
+    }
+
+.imgsec2 div:nth-child(2)
+{
+    /* background: url(../images/luise/sec02-2.png) 50% 50% no-repeat; */
+    /* background-size: cover;/ */
+    background:rgba(0, 0, 0, 0.5);
+    /* opacity: 0.4; */
+    border-right: 1px solid white;
+}
+
+.imgsec2 div:nth-child(3)
+{
+    /* background: url(../images/luise/sec02-3.png)50% 50% no-repeat; */
+    background:rgba(0, 0, 0, 0.5);
+    /* opacity: 0.4; */
+    background-size: cover;
+    border-right: 1px solid white;
+}
+
+.imgsec2 div:nth-child(4){
+    /* background: url(../images/luise/sec02-4.png)50% 50% no-repeat; */
+    background:rgba(0, 0, 0, 0.5);
+    /* opacity: 0.4; */
+    background-size: cover;
+    border-right: 1px solid white;
+    
+}
+
+.imgsec2 div:nth-child(5){
+    /* background: url(../images/luise/sec02-5.png)50% 50% no-repeat; */
+    background:rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    border-right: 1px solid white;
+}
+
+.sec.two .txt {
+    height: 20vh;
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.sec.two .imgsec2 div:hover {
+    background-size: cover;
+    width: 20%;
+    transition: all 2s ease ;
+
+}
+
+.sec.two .imgsec2 div:nth-child(1):hover {
+    background: url(../images/luise/sec02-1.png) 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.sec.two .imgsec2 div:nth-child(2):hover {
+    background: url(../images/luise/sec02-2.png) 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.sec.two .imgsec2 div:nth-child(3):hover {
+    background: url(../images/luise/sec02-3.png) 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.sec.two .imgsec2 div:nth-child(4):hover {
+    background: url(../images/luise/sec02-4.png) 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.sec.two .imgsec2 div:nth-child(5):hover {
+    background: url(../images/luise/sec02-5.png) 50% 50% no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+/* sec02 */
+
+
+/* --------------------------- */
+
+
+/* sec designer */
+
+div.sec.designer .txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 6.3%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+text-align: center;}
+
+
+    div.sec.designer .txt p.title_l {
+        color: white;
+    }
+    div.sec.designer .txt span{
+        color: white;
+    }
+
+div.sec.designer{
+    width: 100%;
+    height: 100vh;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* background:#f7f7f7; */
+    justify-content: center;
+}
+
+.sec.designer > div {
+    flex-direction: column;
+    /* height: 100%;/ */
+}
+
+.swiper-container.designer {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.swiper-wrapper.designer{
+    height: 100vh;
+}
+
+        
+.sec.designer .swiper-container li {
+    height: 100vh;
+    width: 25%;
+}
+        .sec.designer .swiper-container.designer .dg.one{
+            background: url(../images/luise/arne-jacobsen-550x750.jpg) 50% 50%
+            no-repeat;
+            background-size: cover;
+        }
+        .sec.designer .swiper-container.designer .dg.two{
+            background: url(../images/luise/christian-flindt-550x750.jpg) 50% 50%
+            no-repeat;
+            background-size: cover;
+        }
+        .sec.designer .swiper-container.designer .dg.three{
+            background: url(../images/luise/clara-von-zweigbergk-550x750.jpg) 50% 50%
+            no-repeat;
+            background-size: cover;
+        }
+        .sec.designer .swiper-container.designer .dg.four{
+            background: url(../images/luise/olafur_eliasson_550x750.jpg) 50% 50%
+            no-repeat;
+            background-size: cover;
+        }
+        .sec.designer .swiper-container.designer li:nth-child(5){
+            background: url(../images/luise/shoichi-uchiyama-550x750.jpg) 50% 50%
+            no-repeat;
+            background-size: cover;
+        }
+    
+        .sec.three .swiper-container.secthree li:nth-child(6){
+            background: url(../images/luise/nendo-550x750.jpg) 50% 50%
+            no-repeat;
+            background-size: cover;
+        }
+    
+
+        .name {
+            padding-bottom: 20px;
+            font-weight: 100;
+            /* letter-spacing: 10px; */
+            font-size: 2.3rem;
+            /* display: none; */
+            color: white;
+        }
+
+    .bgcolor p:nth-child(2){
+        font-weight: 400;
+        font-size: 0.9rem;
+        text-align: left;
+        display: none;
+        color: white;
+    }
+    
+    div.bgcolor{
+        height:100%;
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5%;
+        border-right: 0.5px solid white;
+    }
+
+    .sec.designer .swiper-container.designer .dg:hover div.bgcolor,.div.learnmore{
+        background:transparent;
+        transition: all 2s ease;
+    }
+
+    .sec.designer .swiper-container.designer .dg:hover{
+        width: 25%;
+    }
+
+    div.sec.designer .learnmore {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+/* 
+    .sec.three .swipersec li:hover div.bgcolor
+    {
+        display: flex;
+        color: white;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0 10%;
+        background:rgba(0, 0, 0, 0.7);
+        cursor: pointer;
+        overflow: hidden;
+        }
+     */
+
+/* sec designer */
+
+
+
+/* sec ref-*/
+
+div.learnmore:hover a{
+    color: white;
+    transition: 0.5s;
+}
+
+div.learnmore:hover {
+    background: #B6A286;
+    border: 1px solid transparent;
+    transition: 0.5s;
+}
+
+
+/* sec05 */
+
+
+.sec.store{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    background: url(../images/luise/mono-header-2100x900.jpg)50% 50%
+    no-repeat;
+    background-size: cover;
+}
+
+.sec.store .inner {
+    background: linear-gradient( to top,rgba(0, 0, 0, 0),black);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 200px 100px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sec.five div:nth-child(1){
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.sec.five>div:nth-child(2){
+    width: 50%;
+}
+
+div.sec.store p:nth-child(1) {
+    color: #B09D85;
+}
+
+div.sec.store p {
+    color: white;
+    /* padding-top: 180px; */
+    /* padding-left: 122px; */
+    z-index: 1;
+}
+
+div.sec.store p:nth-child(2) {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.3;
+    padding-top: 20px;
+}
+
+div.sec.store p:nth-child(3){
+    font-size: 1rem;
+    margin-top: 20px;
+    opacity: 0.8;
+    font-weight: 100;
+}
+
+div.storeimg div{
+    width: 375px;
+    height: 200px;
+    background-size: cover;
+    margin-right: 40px;
+}
+
+div.storeimg div.up.one{
+    background: url(../images/luise/ph-5-1075x750.jpg) 50% 50% no-repeat;
+    cursor: pointer;
+}
+
+div.storeimg div.up.two{
+    background: url(../images/luise/moser-550x750.jpg) 50% 50% no-repeat;
+    cursor: pointer;
+}    
+div.storeimg div.up.three{
+    background: url(../images/luise/display-1075x750.jpg) 50% 50% no-repeat;
+    cursor: pointer;
+}    
+
+div.storeimg div.up.four{
+    background: url(../images/luise/entrance-550x750.jpg) 50% 50% no-repeat;
+    cursor: pointer;
+    
+}    
+
+
+
+
+
+
+
+div.zoom{
+    display: flex;
+    width: 100%;
+    /* justify-content: space-between; */
+}
+
+/* sec store */
+
+
+
+/*sec06 */
+
+.fa-map-marker-alt:before {
+    content: "\f3c5";
+    color: white;
+    width: 100px;
+    height: 100px;
+    padding-right: 10px;
+}
+
+.sec.seller p.title_l {
+
+    color: #ffffff;
+}
+
+.sec.seller span {
+    /* font-weight: 100; */
+    color: #ffffff;
+}
+    .sec.seller {
+        width: 100%;
+        height: 100vh;
+        background: url(../images/luise/마스크\ 그룹\ 40.png)50% 50%
+        no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sec.seller .inner{
+        background:rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    div.sec.seller .txt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .sec.seller .zoom-in{
+        width: 1200px;
+        margin: 0 auto;
+        color: white;
+        z-index: 10;
+        text-align: center;
+        /* padding-top: 135px; */
+    }
+
+    .sec.seller .zoom-in p {
+        font-size: 2.5rem;
+    }
+
+    .sec.seller .zoom-in span {
+        font-size: 1.5rem;
+        opacity: none;
+        text-align: center;
+    }
+
+    .sec.seller .contentarea{
+        display: flex;
+        width: 1200px;
+        height: 377px;
+        /* border: 1px solid white; */
+        margin: 0 auto;
+        margin-top: 88px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }
+
+    .sec.seller .contentarea ul{
+        width: 277px;
+        height: 169px;
+        color: white;
+        /* margin-right: 32px; */
+        border: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        justify-content: center;
+        background:rgba(0, 0, 0, 0.7);
+        margin-left: 30px;
+        text-align: left;
+    }
+
+    .bgcolor{background: #000;
+    width: 100%;}
+
+    .sec.seller .contentarea>ul:first-child{
+        margin-left: 0px;
+    }
+
+    .sec.seller .contentarea>ul:nth-child(5){
+        margin-left: 0px;
+    }
+
+    .sec.seller .contentarea ul:nth-child(5),
+    .sec.seller .contentarea ul:nth-child(6),
+    .sec.seller .contentarea ul:nth-child(7),
+    .sec.seller .contentarea ul:nth-child(8)
+    {
+        margin-top: 37px;
+    }
+
+    .sec.seller .contentarea ul:nth-child(7){
+        margin-right: 0px;
+    }
+
+
+    .sec.seller .contentarea ul li:nth-child(1){
+        font-size: 1.2rem;
+    }
+
+
+    div.storeimg{
+       width: 100%;
+       height: 200px;
+    }
+
+
+
+
+
+
+
+
+
+
+    /*sec06 */
+
+
+    
+    
+    
+    /*sec06 */
+    
+    
+    
+    /* footer */
+    footer{
+        width: 100%;
+        height: 40vh;
+        background:#2E2C2C;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-decoration: none;
+        position: relatives;
+    }
+
+
+
+    footer a{
+        text-decoration: none;
+        color: white;
+        opacity: 0.7;
+        font-size: 0.9rem;
+        padding: 10px;
+        font-weight: 100;
+    }
+
+
+    footer div:nth-child(1) ul li:nth-child(1) a{
+        /* font-size: 1.2rem; */
+        font-weight: 500;
+        opacity: 1;
+        padding-bottom: 10px;
+    }
+
+    footer .inner div:nth-child(1){
+        margin-bottom: 10px;
+    }
+    footer .inner {
+        width: 1527px;
+        margin: 0 auto;
+        display: flex;
+        justify-content:space-between;
+    }
+
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        padding-left:  20px;
+    }
+
+    .footerlogo {
+        background: url(../images/luise/15450075135410.png);
+        /* position: absolute; */
+        background-size: cover;
+        opacity: 0.3;
+        width: 315px;
+        height: 160px;
+    }
+
+    footer div:nth-child(2){
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    footer ul.outfooter{
+        flex-direction: row;
+        margin: 0;
+        padding-top: 2%;
+        
+    }
+
+
+
+/* footer */
+
+
