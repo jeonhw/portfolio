@@ -1,0 +1,1848 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid  rgb(165, 253, 125); */
+
+}
+
+:root {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Serif KR', serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+
+}
+
+.inner {
+    width: 1532px;
+    margin: 0 auto;
+    display: flex;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-width: 1280px;
+    position: relative;
+}
+
+
+header,
+nav,
+section,
+footer {
+    width: 100%;
+}
+
+
+div .title,
+div .title:after,
+div .title:before {
+    transition: all .5s;
+}
+
+div.title:hover {
+    color: #9E2742;
+}
+
+div.title {
+    position: relative;
+}
+
+div.title:hover::after {
+    border: 1px solid #9E2742;
+    position: absolute;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+
+
+
+header {
+    /* background: url(../img/header_bg.png)50% 50% no-repeat; */
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-size: cover; */
+    align-items: center;
+    /* color: rgb(80, 80, 80); */
+    width: 100%;
+    background: white;
+    /* padding: 0 2%; */
+    z-index: 100;
+    transition: all 0.4s;
+    position: fixed;
+
+}
+
+header .logo {
+    font-size: 2.15rem;
+    font-weight: 600;
+    width: 193px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 0 0 20px;
+    background: url(../img/hanok_logo.png) 50% 50% no-repeat;
+    cursor: pointer;
+}
+
+header .logo a,
+header .logo a:visited {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* 타이틀 */
+div.txt span:nth-child(1){
+    padding-bottom: 2rem;
+}
+
+div.txt span:nth-child(2){
+    position: relative;
+
+}
+div.txt span:nth-child(2)::after{
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    background: #000;
+    top: 0
+    ;
+}
+
+/* -------------------- */
+
+header .global {
+    width: 50%;
+    /* margin-right: 60px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* align-items: center; */
+    margin-right: 20px;
+}
+
+header .global span {
+    height: 30px;
+    line-height: 30px;
+    margin: 0 0 0 20px;
+    position: relative;
+}
+
+
+/* .swiper-wrapper { 
+    display: -webkit-inline-flex; 
+} */
+
+header .global span::after {
+    width: 1px;
+    height: 15px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    content: "";
+    top: 8px;
+    right: -10px;
+}
+
+header .global span:last-child::after {
+    display: none;
+}
+
+header .mMenuBt {
+    display: none;
+}
+
+
+/* scroll에 의해 header.color로 변경 */
+header.color {
+    background: rgba(255, 255, 255, 1);
+    transition: all 0.3s;
+    color: #666;
+}
+
+header.color .logo a,
+header.color .logo a:visited {
+    color: #666;
+    transition: color 0.3s;
+}
+
+header.color .global span::after {
+    background: #666;
+    transition: all 0.3s;
+
+}
+
+/* 네비게이션*/
+nav {
+    height: 100px;
+    position: fixed;
+    display: inline-flex;
+    z-index: 110;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+
+nav a,
+nav a:visited {
+    text-decoration: none;
+    font-weight: 200;
+    color: #202020;
+    font-family: sans-serif;
+}
+
+nav ul.gnb {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+nav ul.gnb li.gnbMenu {
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+nav ul.gnb li.gnbMenu .title {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    display: block;
+    font-weight: 500;
+    font-size: 1.5rem;
+    font-family: 'Noto Serif KR'
+}
+
+/* 모바일용 서브메뉴 감추기 */
+nav ul.gnb .mCloseBt,
+nav ul.gnb ul.mSnb {
+    display: none;
+}
+
+
+
+/* pc용 서브메뉴 */
+nav .snb {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 0px;
+    background: white;
+    color: #000;
+    overflow: hidden;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    z-index: 10;
+}
+
+nav .gnb:hover .snb {
+    height: 398px;
+    transition: all 0.5s ease;
+}
+
+nav .snb ul {
+    width: 200px;
+}
+
+nav .snb ul li {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    /* color: #707070; */
+    text-align: center;
+    font-size: 1.2rem;
+    color: #1E1E1E;
+}
+
+
+/***************** section *****************/
+section {
+    height: 100vh;
+}
+
+section.section2{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    background: url(../img/header_bg.png)50% 50% no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+section.section3 {
+    /* background:url(../img/photo-1548115184-bc6544d06a58.png)50% 50% no-repeat; */
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    /* align-items: center; */
+    /* position: fixed; */
+    background-color: white;
+    position: relative;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    height: 100vh;
+}
+
+section.section2 div.pattern {
+    background: url(../img/cad512dfa84d9b608fa5850547847286.gif) 50% 50% no-repeat;
+    opacity: 0.4;
+    z-index: 500;
+    position: fixed;
+}
+
+
+
+/* 탭 */
+
+section.section2 .tabV {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+section.section2 .tabV ul {
+    display: flex;
+    flex-direction: column;
+    /* margin: 0 3%; */
+}
+
+section.section2 .tabV ul li {
+    width: 87px;
+    height: 37px;
+    line-height: 37px;
+    background: transparent;
+    border: 1px solid #707070;
+    font-weight: 300;
+    color: #0A0A0A;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight: normal;
+    margin-bottom: 14px;
+    border-radius: top 5px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+section.section2 .tabV ul li.on {
+
+    background: #623342;
+    color: white;
+    transition: all 0.5s;
+}
+
+
+/* section .tabV ul li:hover::after,
+section .tabV ul li.on::after{
+    width: 100%;
+    height: 100%;
+    background: #73a6c7;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+section .tabV ul li:hover::after{
+
+    background: rgba(255,255,255,0.3); 
+} */
+
+section.section2 .tabV:nth-child(1) .content {
+    width: 1200px;
+    height: 400px;
+    color: #333;
+
+}
+
+section .tabV .content .conBox {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+section .tabV .content .conBox.on {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: all 1s ease;
+
+}
+
+
+div.txt {
+    display: flex;
+    flex-direction: column;
+}
+
+section.section2 .txt {
+    width: 320px;
+}
+
+div.txt span:nth-child(1) {
+    font-size: 3.4rem;
+    /* padding: 0 0 20% 0; */
+    font-family: 'Noto Serif KR';
+    /* font-weight: bold; */
+    position: relative;
+}
+
+div.txt span:nth-child(1)::before {
+
+    content: "";
+}
+
+div.txt span:nth-child(1)::after {
+    width: 1px;
+    height: 15px;
+    color: #000;
+    position: absolute;
+    content: "";
+    z-index: 500;
+    display: block;
+    top: 10%;
+}
+
+
+div.txt span:nth-child(2) {
+    font-size: 1.45rem;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+/* 북촌 한옥마을 소개 탭 이미지 */
+
+/* section.section2 .inner{
+    display: flex;
+    flex-direction: column;
+} */
+
+
+/* roundimg 공통 설정 */
+.swiper-container.mySwiper.village .swiper-slide div.roundimg {
+    width: 550px;
+    height: 550px;
+    border-radius: 275px;
+}
+
+/* 북촌 history */
+.swiper-container.mySwiper.village .swiper-slide.one .roundimg.one {
+    background: url(../img/town_history1_1.png)50% 50% no-repeat;
+    background-size: cover;
+}
+
+/* 북촌 now */
+.swiper-container.mySwiper.village .swiper-slide.one div .roundimg.two {
+    background: url(../img/이미지\ 39.png)50% 50% no-repeat;
+    background-size: cover;
+}
+
+/* 북촌 introduction */
+.swiper-container.mySwiper.village .swiper-slide.one div .roundimg.three {
+    background: url(../img/이미지\ 38.png)50% 50% no-repeat;
+    background-size: cover;
+}
+
+/* ---------------------------------------------------------- */
+
+/* 경복궁 서측 history */
+.swiper-container.mySwiper.village .swiper-slide.two div .roundimg.one {
+    background: url(../img/gyeongbokgung_history.jpg)50% 50% no-repeat;
+    background-size: cover;
+}
+
+/* 경복궁 서측 now */
+/* 다른 이미지 찾아 써야 함 */
+.swiper-container.mySwiper.village .swiper-slide.two div .roundimg.two {
+    background: url(../img/town_intro2_1.jpg)50% 50% no-repeat;
+    background-size: cover;
+}
+
+/* 경복궁 서측 introduction */
+.swiper-container.mySwiper.village .swiper-slide.two div .roundimg.three {
+    background: url(../img/town_status2_1.jpg)50% 50% no-repeat;
+    background-size: cover;
+}
+
+/* ------------------------------------------ */
+
+/* 인사동 현황 사진 라인 잡힌 거 이미지 변경해야 함 */
+
+/* 인사동 역사 */
+.swiper-container.mySwiper.village .swiper-slide.three div .roundimg.one {
+    background: url(../img/insadong_history_black.jpg)50% 50% no-repeat;
+    background-size: cover;
+}
+
+/* 인사동 현황 */
+.swiper-container.mySwiper.village .swiper-slide.three div .roundimg.two {
+    background: url(../img/gyeongbokgung_finfo.png)50% 50% no-repeat;
+    background-size: cover;
+}
+
+/* 인사동 소개 */
+.swiper-container.mySwiper.village .swiper-slide.three div .roundimg.three {
+    background: url(../img/gyeongbokgung_Insadong_Info.jpg)50% 50% no-repeat;
+    background-size: cover;
+}
+
+
+div .roundtxt.one {
+    align-items: center;
+}
+
+div .roundtxt h1 {
+    font-size: 2.5rem;
+    /* padding-bottom: 5%; */
+    font-weight: 500;
+    font-family: 'Noto Serif KR', serif;
+}
+
+
+/* hover 시 zoom 기능 */
+.roundbox .roundimg {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+
+}
+
+.roundbox:hover .roundimg {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: all 0.5s ease-in-out;
+
+}
+
+/* -------------------------------- */
+
+.roundbox {
+    overflow: hidden;
+    width: 550px;
+    height: 550px;
+    border-radius: 275px;
+}
+
+
+
+div.section2 div.roundtxt.p {
+    width: 8px;
+    height: 1px;
+    color: black;
+    position: relative;
+}
+
+div.section2 div.roundtxt.p::after {
+    width: 1px;
+    height: 15px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    content: "";
+    top: 8px;
+    right: -10px;
+}
+
+
+/* 제목 아래 가로라인 */
+div.line {
+    width: 1px;
+    height: 40px;
+    color: black;
+    background: #000;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    /* margin: 15% 10%; */
+    display: none;
+}
+
+div.txt span {
+    font-size: 1.4rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+div .roundtxt p.engname {
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    color: rgba(0, 0, 0, 0.2);
+    padding: 1% 0;
+    /* font-family: */
+    /* position: sticky; */
+}
+
+div .roundtxt p.button {
+    font-size: 2rem;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: normal;
+    position: relative;
+    cursor: pointer;
+    /* width: 500px; */
+    padding-left: 20;
+    padding-left: 45%;
+    margin-top: 25%;
+    color: #1E1E1E;
+    /* transform: translateY(0px); */
+
+}
+
+/* 
+div .roundtxt p.button.on{
+    opacity: 0.5;
+    transition: 0.5s ease-in-out;
+    transform: translateY(10px);
+} */
+
+div .roundtxt p.button::before {
+    width: 150px;
+    height: 1px;
+    background: #A7A7A7;
+    content: "";
+    /* top: 1px; */
+    /* bottom: 1px; */
+    left: 0;
+    display: block;
+    top: 50%;
+    bottom: 500px;
+    position: absolute;
+}
+
+/* --------------------------------- */
+.thumbGallerry {
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.thumbGallerry .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.thumbGallerry .swiper-slide.bg01 {
+    background: url(../img/cad512dfa84d9b608fa5850547847286.png) center;
+    background-size: cover;
+}
+
+.thumbGallerry .swiper-slide.bg02 {
+    /* background: url(/img/gyeongbokgung_history.jpg) center;/ */
+    background-size: cover;
+}
+
+.thumbGallerry .swiper-slide.bg03 {
+    background: url(/img/gyeongbokgung_history.jpg) center;
+    background-size: cover;
+}
+
+.thumbGallerry .mainSlide {
+    width: 900px;
+    height: 100%;
+    margin: 0;
+}
+
+.thumbGallerry .thumbSlide {
+    width: 200px;
+    height: 100%;
+}
+
+.thumbGallerry .thumbSlide .swiper-slide {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.thumbGallerry .thumbSlide .swiper-slide-thumb-active {
+    opacity: 1;
+    border: 1px solid #9E2742;
+}
+
+.thumbGallerry .swiper-container.mainSlide .swiper-slide.bg01 {
+    background: url(../img/gyeongbokgung_Insadong_Info.jpg);
+}
+
+/* 배경에 깔리는 세리프 폰트 */
+span.fixed {
+    position: fixed;
+    top: 50%;
+    bottom: 20%;
+    color: rgba(0, 0, 0, 0.03);
+    font-size: 6.8rem;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: bold;
+    left: -3%;
+    display: none;
+    /* 거슬려서 논 처리 해놓음  */
+}
+
+
+header .global {
+    width: 50%;
+    /* margin-right: 60px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* align-items: center; */
+    margin-right: 20px;
+}
+
+header .global span {
+    height: 30px;
+    line-height: 30px;
+    margin: 0 0 0 20px;
+    position: relative;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+header .global span::after {
+    width: 1px;
+    height: 15px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    content: "";
+    top: 8px;
+    right: -10px;
+}
+
+.swiper-container .swiper-wrapper.village {
+    display: flex;
+    height: 650px;
+    align-items: center;
+}
+
+.swiper-container.mySwiper.village {
+    width: 100%;
+    height: 720px;
+    overflow-x: hidden;
+    overflow-y: visible;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.swiper-container.mySwiper.village .swiper-slide {
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: block;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+}
+
+.swiper-container.mySwiper.village .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* 지도 형 bullet 스타일 설정  */
+
+.swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    /* line-height: 20px; */
+    margin-left: 10px;
+    background: #A7A7A7;
+    /* display: flex; */
+    flex-direction: row;
+    border-radius: 7.5px;
+    /* text-align:none; */
+    z-index: 100;
+    cursor: pointer;
+    margin: 0 5%;
+}
+
+.swiper-pagination-bullet {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-pagination-bullet:nth-child(1)::after {
+    content: "북촌";
+    position: absolute;
+    color: black;
+    top: 30px;
+    font-size: 1rem;
+    display: flex;
+    width: 30px;
+    font-size: 1.3rem;
+    font-family: 'Noto Serif KR', serif;
+    text-align: center;
+    align-items: center;
+    width: 100px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet:nth-child(2)::after {
+    content: "경복궁 서측";
+    position: absolute;
+    color: black;
+    top: 30px;
+    font-size: 1rem;
+    display: flex;
+    width: 30px;
+    font-size: 1.3rem;
+    font-family: 'Noto Serif KR', serif;
+    text-align: center;
+    align-items: center;
+    width: 100px;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet:nth-child(3)::after {
+    content: "인사동";
+    position: absolute;
+    color: black;
+    top: 30px;
+    font-size: 1rem;
+    display: flex;
+    width: 30px;
+    font-size: 1.3rem;
+    font-family: 'Noto Serif KR', serif;
+    text-align: center;
+    align-items: center;
+    width: 100px;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet:nth-child(4)::after {
+    content: "운현궁";
+    position: absolute;
+    color: black;
+    top: 30px;
+    font-size: 1rem;
+    display: flex;
+    width: 30px;
+    font-size: 1.3rem;
+    font-family: 'Noto Serif KR', serif;
+    text-align: center;
+    align-items: center;
+    width: 100px;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet:nth-child(5)::after {
+    content: "돈화문로";
+    position: absolute;
+    color: black;
+    top: 30px;
+    font-size: 1rem;
+    display: flex;
+    width: 30px;
+    font-size: 1.3rem;
+    font-family: 'Noto Serif KR', serif;
+    text-align: center;
+    align-items: center;
+    width: 100px;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet:nth-child(6)::after {
+    content: "성북";
+    position: absolute;
+    color: black;
+    top: 30px;
+    font-size: 1rem;
+    display: flex;
+    width: 30px;
+    font-size: 1.3rem;
+    font-family: 'Noto Serif KR', serif;
+    text-align: center;
+    align-items: center;
+    width: 100px;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet:nth-child(7)::after {
+    content: "은평";
+    position: absolute;
+    color: black;
+    top: 30px;
+    font-size: 1rem;
+    display: flex;
+    width: 30px;
+    font-size: 1.3rem;
+    font-family: 'Noto Serif KR', serif;
+    text-align: center;
+    align-items: center;
+    width: 100px;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet:nth-child(8)::after {
+    content: "익선동";
+    position: absolute;
+    color: black;
+    top: 30px;
+    font-size: 1rem;
+    display: flex;
+    width: 30px;
+    font-size: 1.3rem;
+    font-family: 'Noto Serif KR', serif;
+    text-align: center;
+    align-items: center;
+    width: 100px;
+    justify-content: center;
+}
+
+.swiper-pagination::before {
+    width: 1900px;
+    height: 1px;
+    content: "";
+    background: #707070;
+    position: absolute;
+    overflow: hidden;
+}
+
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: #9E2742;
+    transition: all 1s;
+    position: relative;
+}
+
+/* 집따라가기 시도 중 */
+.swiper-pagination-bullet-active::before {
+    content: "";
+    background:
+        url(../img/cad512dfa84d9b608fa5850547847286.png);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 5px;
+}
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+    align-items: center;
+}
+
+/* ------------------------------------------- */
+
+
+/* scroll 버튼 */
+.scroll {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.scroll span {
+    width: 100%;
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: -1px;
+}
+
+.scroll span:first-child {
+    margin-bottom: 20px;
+}
+
+.scroll span:last-child {
+    margin-top: 20px;
+}
+
+.scroll span:hover,
+.scroll span.on {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+section.section1 p {
+    color: white;
+}
+
+div.content div.roundtxt {
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: url(../img/그룹\ 82.png) 50% 50% no-repeat;
+    background-size: contain;
+    padding-left: 5%;
+}
+
+div.content span {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 100;
+    line-height: 1.98rem
+}
+
+
+
+
+
+/* section 이벤트 */
+
+/* section.section4{ }
+section.section5{}
+section.section6{}
+section.section7{ } */
+
+
+
+/* 네비게이션 customazing */
+
+
+/* #con34 .squareimg{
+    width: 395px;
+    height: 496px; 
+    padding-left: 5%;
+}
+
+#con34 .squareimg.one{
+    background: url(../img/마스크\ 그룹\ 60.png) 50% 50%;
+    background-size: cover;    
+}
+
+#con34 .squareimg.two{
+    background: url(../img/마스크\ 그룹\ 62.png) 50% 50%;
+    transform: translateY(40%);
+}
+
+#con34 .squareimg.three{
+    background: url(../img/이미지\ 2.png) 50% 50%;    
+}
+
+#con35 .squareimg.one{
+    background: url(../img/마스크\ 그룹\ 60.png) 50% 50%;
+    background-size: cover;    
+}
+
+#con35 .squareimg.two{
+    background: url(../img/마스크\ 그룹\ 62.png) 50% 50%;
+    transform: translateY(40%);
+}
+
+#con35 .squareimg.three{
+    background: url(../img/이미지\ 2.png) 50% 50%;    
+}
+.squarebox{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.swiper-container.mySwiper.event li{
+    height: 265px;
+    width: 100%;
+    border: 1px solid #9E2742;
+    align-items: center;
+    display: flex;
+    font-size: 1.5rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    justify-content: center;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.swiper-container.mySwiper.event .swiper-slide:hover{
+box-shadow: rgba(0, 0, 0, 0.5);
+}
+
+.swiper-container.mySwiper.event .swiper-slide span{
+    font-family: 'Noto Serif KR', serif;
+    color: #9E2742;
+    font-size: 2rem;
+    line-height: 7rem;
+} */
+/* div.tabV:nth-child(2){
+    display: flex;
+    flex-direction: row-reverse;
+    height: 66vh;
+    justify-content: space-around; 
+} */
+
+/* font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Noto Serif KR', serif;
+font-family: 'Poppins', sans-serif;
+font-size: 14px; */
+
+section .tabV:nth-child(2) .content {
+    /* height: 100%; */
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    height: 70%;
+}
+
+
+/* thumbGallerry 형식의 swiper */
+.thumbGallerry {
+    width: 100%;
+    height: 500px;
+    /* margin: 0 auto 200px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background: rgb(0, 0, 0);/ */
+    overflow: hidden;
+}
+
+.thumbGallerry .swiper-slide {
+    width: 500px;
+    height: 100%;
+    background: white;
+
+}
+
+
+div.squaretxt {
+    font-size: 1.1rem;
+    line-height: 2.5rem;
+}
+
+/* .thumbGallerry .swiper-slide.bg01{
+
+}
+.thumbGallerry .swiper-slide.bg02{
+
+}
+.thumbGallerry .swiper-slide.bg03{
+
+} */
+.thumbGallerry .mainSlide {
+    width: 900px;
+    height: 100%;
+    margin: 0;
+}
+
+.thumbGallerry .thumbSlide {
+    width: 350px;
+    height: 100%;
+}
+
+.thumbGallerry .thumbSlide .swiper-slide {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.thumbGallerry .thumbSlide .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+
+
+/* 
+
+::webkit-scrollbar : 스크롤바 전체
+::webkit-scrollbar-thumb : 스크롤 막대
+::webkit-scrollbar-track : 스크롤 막대 외부 */
+
+
+/* ---------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+/* 한옥 등록 */
+
+section.section4 {
+    background: url(../img/그룹\ 81.png)50% 50% no-repeat;
+    background-size: cover;
+    height: 100vh;
+    /* position: relative; */
+}
+
+section.section4 div.txt {
+    color: white;
+    /* background: white; */
+    /* width: auto; */
+    /* height: 20vh */
+    font-weight: 200;
+    /* position: absolute; */
+}
+
+section.section4 div.line {
+    /* color: white; */
+    background: white;
+    padding: 0;
+}
+
+section.section4 ul {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid snow;/ */
+    width: 100%;
+    /* height: 100vh; */
+}
+
+section.section4 ul li {
+    width: 25%;
+    height: 100%;
+    /* border-right: 1px solid rgba(255, 255, 255, 0.157); */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+div .roundstep {
+    width: 350px;
+    height: 350px;
+    border-radius: 175px;
+    border: 1px solid white;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+/* 일단 pass */
+div.roundstep.on::before {
+    transition: 0.5s;
+    border-top: 4px solid #9E2742;
+    padding: -7px;
+}
+
+div.roundstep.on::after {
+    transition: 0.75s;
+    border-right: 4px solid #9E2742;
+    padding: -7px;
+}
+
+
+div .roundstep p:nth-child(1) {
+    font-size: 2.4rem;
+    font-family: 'Noto Serif KR', serif;
+}
+
+div .roundstep h2 {
+    font-size: 2.4rem;
+    font-family: 'Noto Serif KR';
+    font-weight: 500;
+    padding: 4% 0;
+}
+
+div .roundstep p:nth-child(3) {
+    font-size: 1.3rem;
+    font-family: 'Noto Sans KR';
+    font-weight: 100;
+}
+
+div .roundstep p:last-child {
+    padding: 2% 0;
+}
+
+.inner.three {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+/* :root{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Serif KR', serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    
+} */
+
+section.section5 {
+    width: 100%;
+    height: 150vh;
+    /* border: 1px solid #A7A7A7; */
+    /* display: flex; */
+    flex-direction: column;
+}
+
+section.section5 ul {
+    display: flex;
+    height: 102vh;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.section5 .inner {
+    /* width: 100%; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+section.section5 ul li div.one-best .card {
+    background: url(../img/마스크\ 그룹\ 33@2x.png) 50% 50%;
+    background-size: cover;
+    width: 342px;
+    height: 523px;
+    cursor: pointer;
+}
+
+section.section5 ul li div.five-best .card {
+    background: url(../img/마스크\ 그룹\ 50@2x.png) 50% 50%;
+    background-size: cover;
+    width: 342px;
+    height: 523px;
+    cursor: pointer;
+}
+
+
+section.section5 ul li div.card.small {
+    background-size: cover;
+    width: 342px;
+    height: 400px;
+    cursor: pointer;
+}
+
+section.section5 ul li div div.two-best .card.small.one {
+    background: url(../img/마스크\ 그룹\ 46@2x.png) 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+    width: 342px;
+    height: 400px;
+}
+
+section.section5 ul li div div.two-best .card.small.two {
+    background: url(../img/마스크\ 그룹\ 47@2x.png) 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+    width: 342px;
+    height: 400px;
+}
+
+section.section5 ul li div div.three-best .card.small.one {
+    background: url(../img/마스크\ 그룹\ 48@2x.png) 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+    width: 342px;
+    height: 400px;
+}
+
+section.section5 ul li div div.four-best .card.small.two {
+    background: url(../img/마스크\ 그룹\ 49@2x.png) 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+    width: 342px;
+    height: 400px;
+}
+
+section.section5 ul li:nth-child(2),
+section.section5 ul li:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 859px;
+}
+
+section.section5 ul li:nth-child(3) {
+
+    margin-bottom: -8%;
+}
+
+
+
+
+
+
+/* 우수한옥 호버 시 라인효과 */
+
+/* section.section5 ul li div:first-child{
+    position: relative;
+    width: 342px;
+    height: 523px;
+    cursor: pointer;
+}
+.section5 ul li div.two-best{
+    position: relative;
+    width: 342px;
+    height:400px;
+}
+
+.section5 ul li:nth-child(2) div{
+    width: 342px;
+    height: 400px;
+    position: relative;
+    cursor: pointer;
+}
+
+.section5 ul li:nth-child(2) div div{
+    position: relative;
+    width: 342px;
+    height: 523px;
+}
+
+
+
+.section5 ul li:before,
+.section5 ul li:after,
+.section5 ul li div:after,
+.section5 ul li div:before {transition:all 1s ease; display:block; content:''; position:absolute; background:#9E2742; z-index:100;}
+
+.section5 ul li:before {
+    top:0;
+    left:0;
+    right:100%;
+    height:4px;
+}
+.section5 ul li:after {
+    top:0;
+    right:0;
+    bottom:100%;
+    width:4px;
+}
+.section5 ul li:hover:before{
+    -webkit-transition-delay:0s;
+    transition-delay:0s; right:0;
+}
+.section5 ul li:hover:after {
+    -webkit-transition-delay:.2s;
+    transition-delay:.2s;
+    bottom:0;
+}
+
+.section5 ul li div:after {
+    bottom:0;
+    right:0;
+    left:100%;
+    height:4px;
+}
+.section5 ul li div:before {
+    bottom:0;
+    left:0;
+    top:100%;
+    width:4px
+}
+
+.section5 ul li div:hover:after{    -webkit-transition-delay:.4s;
+    transition-delay:.4s;
+    left:0;
+}
+.section5 ul li div:hover:before {-webkit-transition-delay:.6s; transition-delay:.6s; top:0;} */
+
+
+/* 우수 한옥 오버 시 글자등장 */
+
+/* .card {
+    position: relative;
+    display: -webkit-box;
+    -webkit-box-align: end;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 342px;
+    height: 859px;
+    background-size: cover;
+    background-position: 0 0;
+    pointer-events: none;
+    transition: all 1s ease-in-out;
+}
+
+.card:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.content {
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: left;
+    width: 100%;
+    padding: 1rem;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.title {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
+    text-align: left;
+    color: white;
+    font-family: 'Noto Serif KR';
+    line-height: 4.5rem;
+}
+
+.copy {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.35;
+    color: white;
+    font-weight: 100;
+    text-align: left;
+}
+
+
+.card:after {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.content {
+    -webkit-transform: translateY(calc(100% - 4.5rem));
+    transform: translateY(calc(100% - 4.5rem));
+}
+
+
+/* 제목 제외 */
+section.section5.content>*:not(.title) {
+    opacity: 0;
+    -webkit-transform: translateY(1rem);
+    transform: translateY(1rem);
+    -webkit-transition: opacity var(--d) var(--e), -webkit-transform var(--d) var(--e);
+    transition: opacity var(--d) var(--e), -webkit-transform var(--d) var(--e);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e), -webkit-transform var(--d) var(--e);
+}
+
+.card:hover:before,
+.card:focus-within:before {
+    -webkit-transform: translateY(-4%);
+    transform: translateY(-4%);
+}
+
+.card:hover:after,
+.card:focus-within:after {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.card:hover .content,
+.card:focus-within .content {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.card:hover .content>*:not(.title),
+.card:focus-within .content>*:not(.title) {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition-delay: calc(var(--d) / 8);
+    transition-delay: calc(var(--d) / 8);
+}
+
+.card:focus-within:before,
+.card:focus-within:after,
+.card:focus-within .content,
+.card:focus-within .content>*:not(.title) {
+    -webkit-transition-duration: 1s;
+    transition-duration: 2s;
+} 
+
+
+
+
+/* 공지사항 섹션 */
+
+section.section6{
+    align-items: center;
+    justify-content:   center;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+section.section6 .inner{
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* 공지사항 섹션 탑부분 */
+section.section6 .inner div.topsec{
+    display: flex;
+    justify-content: space-between;
+}
+
+section.section6 ul{
+    display: flex;
+}
+
+section.section6 .tabV{
+    width: 685px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+section.section6 ul{
+    width: 260px;
+    height: 60px;
+    line-height: 30px;
+}
+
+section.section6 ul li.on{
+    background: rgb(41, 41, 41);
+    color: white;
+    transition: all 0.5s;
+}
+
+
+section.section6 .topsec{
+    width: 100%;
+}
+
+
+section.section6 div.topsec ul li{
+    width: 50%;
+    text-align: center;
+    font-size:  1.5rem;
+    font-family: 'Noto Serif KR';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+
+section.section6 h2{
+    font-family: 'Noto Serif KR';
+    padding-bottom: 1rem;
+
+}
+
+section.section6 .tabV .content .conBox.on{
+    text-align: left;
+    justify-content: start;
+}
+
+section.section6 div.topsec p {
+    font-size: 1.4rem;
+    font-family: 'Noto sans KR';
+    line-height: 4rem;
+    border-bottom: 0.5px solid #666;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.section6 p a {
+    text-decoration: none;
+}
+
+section.section6 div.news{
+    width: 684px;
+}
+
+/* 공지사항 섹션 바텀 부분 */
+
+section.section6 div.bottomsec{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 232px;
+    margin-top: 3rem;
+}
+
+
+section.section6 div.zone{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+section.section6 div.zone ul{
+    width: 685px;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+section.section6 div.zone.gallery ul{
+    width: 726px;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+section.section6 div.zone li{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+section.section6 div.bottomsec div.zone div{
+    width: 182px;
+    height: 60%;
+}
+
+section.section6 div.bottomsec div.zone li:nth-child(1) div{
+    background: url(../img/마스크\ 그룹\ 61@2x.png)
+    50% 50% no-repeat;
+    background-size: cover;
+    width: 182px;
+    height: 105px;
+    border: 1px solid #9e9e9e;
+}
+
+
+
+
+section.section6 div.bottomsec div.zone li:nth-child(2) div{
+    background: url(../img/마스크\ 그룹\ 59@2x.png)
+    50% 50% no-repeat;
+    background-size: cover;
+    width: 182px;
+    height: 105px;
+    border: 1px solid #9e9e9e;
+}
+
+section.section6 div.bottomsec div.zone li:nth-child(3) div{
+    background: url(../img/마스크\ 그룹\ 55@2x.png)
+    50% 50% no-repeat;
+    background-size: cover;
+    width: 182px;
+    height: 105px;
+    border: 1px solid #9e9e9e;
+}
+
+
+section.section6 div.bottomsec div.zone.gallery li:nth-child(1) div{
+    background: url(../img/마스크\ 그룹\ 53@2x.png)
+    50% 50% no-repeat;
+    background-size: cover;
+    width: 182px;
+    height: 184px;
+    border: 1px solid #9e9e9e;
+}
+section.section6 div.bottomsec div.zone.gallery li:nth-child(2) div{
+    background: url(../img/마스크\ 그룹\ 51@2x.png)
+    50% 50% no-repeat;
+    background-size: cover;
+    width: 182px;
+    height: 184px;
+    border: 1px solid #9e9e9e;
+}
+section.section6 div.bottomsec div.zone.gallery li:nth-child(3) div{
+    background: url(../img/마스크\ 그룹\ 54@2x.png)
+    50% 50% no-repeat;
+    background-size: cover;
+    width: 182px;
+    height: 184px;
+    border: 1px solid #9e9e9e;
+}
+
+
+section.section6 div.bottomsec p{
+    font-size: 1.4rem;
+    padding-top: 1rem;
+    font-family: 'Noto Sans KR';
+}
+
+
+
+footer div{
+    background:#202020;
+    width: 100%;
+    height: 300px;
+}
+
+
+
+
+
+
+
+
+
+
