@@ -1,0 +1,524 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    /* border: 1px solid #997545; */
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Serif KR', serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    opacity: 0.5;
+}
+
+.inner {
+    width: 1350px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/****** 풀페이지 스크롤링 ******/
+
+.ts-line {
+    overflow: hidden;
+    padding: 0 0 0.2em 0;
+    margin: 0 0 -0.1em;
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+.fullpage_scroll {
+    width: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+}
+
+.fullpage_scroll .fullpage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.fullpage_scroll .sec01 {
+    background: #F7F5F0;
+    display: flex;
+    flex-direction: column;
+}
+
+.fullpage_scroll .sec01 p{
+    color: #383A3F;
+    font-size: 10rem;
+    font-weight: 100;
+
+}
+
+
+.fullpage_scroll .sec01 h3{
+    color: #4444449f;
+    font-size: 130px;
+    font-weight: 100;
+}
+
+
+
+
+
+.fullpage_scroll .sec02 {
+    background: url(../imgs/그룹\ 2.png) 50% 0% no-repeat;
+    background-size: cover;
+}
+
+.fullpage_scroll .sec02 .txt h2,
+.fullpage_scroll .sec03 .txt h2 {
+    width: 408px;
+    font-family: 'noto sans kr';
+    font-size: 2.4rem;
+    margin: 0;
+    padding: 0;
+}
+
+.fullpage_scroll .sec03 .txt h2 {
+    width: 408px;
+    font-family: 'POPINS';
+    font-size: 2.4rem;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+.fullpage_scroll .sec02 .txt p,
+.fullpage_scroll .sec03 .txt p {
+    width: 454px;
+    /* height: 87px; */
+    font-family: 'noto sans kr';
+    font-size: 1.2rem;
+    font-weight: 100;
+    margin: 1.2rem 0;
+    padding-right: 4rem;
+    opacity: 0.9;
+    line-height: 2rem;
+}
+
+.fullpage_scroll .sec02 .txt,
+.fullpage_scroll .sec03 .txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fullpage_scroll .txt .button {
+    font-size: 1.4rem;
+    font-weight: 200;
+    border: 1px solid white;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fullpage_scroll .txt span {
+    color: rgba(255, 255, 255, 0.9);
+    padding-bottom: 0.5rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+div.content,
+div.contenttwo {
+    align-items: center;
+    position: relative;
+    display: flex;
+}
+
+div.content div:nth-child(1) div{
+    background: url(../imgs/마스크\ 그룹\ 112.png) 50% 50% no-repeat;
+    width: 810px;
+    height: 631px;
+    background-size: cover;
+    border-radius: 7px;
+    z-index: 10;
+}
+
+div.fullpage_scroll >.inner> div{
+    display: flex;
+}
+
+div.content div:nth-child(2){
+    background: url(../imgs/마스크\ 그룹\ 113.png) 50% 50% no-repeat;
+    width: 213px;
+    height: 465px;
+    background-size: cover;
+    border-radius: 10px;
+    z-index: 100;
+    position: absolute;
+    top: 45%;
+    left: 83%;
+}
+
+
+div.contenttwo div:nth-child(1) {
+    background: url(../imgs/마스크\ 그룹\ 118.png) 50% 50% no-repeat;
+    width: 810px;
+    height: 631px;
+    background-size: cover;
+    border-radius: 7px;
+    z-index: 10;
+}
+
+div.contenttwo div:nth-child(2) {
+    background: url(../imgs/마스크\ 그룹\ 117.png) 50% 50% no-repeat;
+    width: 213PX;
+    height: 465px;
+    background-size: cover;
+    border-radius: 10px;
+    z-index: 100;
+    position: absolute;
+    top: 45%;
+    left: 83%;
+}
+
+
+
+.fullpage_scroll .sec03 {
+    background: url(../imgs/그룹\ 4.png) 50% 50% no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+.fullpage_scroll .sec04 {
+    background: #d7d7d7;
+}
+
+.fullpage_scroll .sec05 {
+    background: #a5a5a5;
+}
+
+
+
+.fullpage_scroll aside {
+    position: fixed;
+    top: 40%;
+    right: 20px;
+    z-index: 200;
+}
+
+.fullpage_scroll aside ul li a {
+    color: #2d2d2d;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    margin: 1rem 0;
+
+}
+
+.fullpage_scroll aside ul li.on a {
+    background: #292722;
+    color: #fff;
+    transition: 0.5s;
+}
+
+footer {
+    margin: 0;
+    background: #ededed;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+/****** 풀페이지 스크롤링 in section.sec01 opacity 캐러셀 ******/
+
+section.sec01 ul {
+    display: flex;
+    flex-direction: row;
+}
+
+section.sec01 ul li {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.fullpage_scroll .sec01>ul>li.fullBg01 {
+    background: #F0E5DE;
+}
+
+.fullpage_scroll .sec01>ul>li.fullBg02 {
+    background: #ABD0CE;
+}
+
+.fullpage_scroll .sec01>ul>li.fullBg03 {
+    background: #7C7877;
+}
+
+.fullpage_scroll .sec01>ul>li.fullBg04 {
+    background: #D9D4CF;
+}
+
+section.sec01 ul li.active {
+    display: flex;
+    z-index: 20;
+}
+
+/* section.sec01 .btn {
+    position: absolute;
+    top: 400px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    white-space: nowrap;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 30;
+} */
+
+/* section.sec01 .btn.prev {
+    right: 50%;
+    margin-right: 500px;
+} */
+
+/* section.sec01 .btn.next {
+    left: 50%;
+    margin-left: 500px;
+} */
+
+section.sec01 .paging {
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+}
+
+section.sec01 .paging button {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin: 0 20px;
+    background: rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: none;
+    padding: 0;
+}
+
+section.sec01 .paging button.active {
+    background: #d4d4d4;
+    width: 15px;
+    height: 15px;
+}
+
+section.sec01 .ctrl_group {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+}
+
+section.sec01 .ctrl_group .numbering,
+section.sec01 .ctrl_group .stop,
+section.sec01 .ctrl_group .play {
+    height: 36px;
+    width: 50px;
+    padding: 5px 0px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.sec01 .ctrl_group .stop img,
+section.sec01 .ctrl_group .play img {
+    width: 26px;
+    height: 26px;
+}
+
+
+
+
+/****** 풀페이지 스크롤링 in section.sec03 fullsize 캐러셀 ******/
+section.sec03 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+section.sec03 ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+section.sec03 ul li {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fullpage_scroll .sec03>ul>li.fullBg05 {
+    background: #F6B352;
+}
+
+.fullpage_scroll .sec03>ul>li.fullBg06 {
+    background: #F68657;
+}
+
+.fullpage_scroll .sec03>ul>li.fullBg07 {
+    background: #383A3F;
+}
+
+.fullpage_scroll .sec03>ul>li.fullBg08 {
+    background: #1F2124;
+}
+
+section.sec03 .btn {
+    position: absolute;
+    top: 400px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    white-space: nowrap;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+section.sec03 .btn.prev {
+    right: 50%;
+    margin-right: 500px;
+}
+
+section.sec03 .btn.next {
+    left: 50%;
+    margin-left: 500px;
+}
+
+section.sec03 .paging {
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.sec03 .paging button {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin: 0 20px;
+    background: rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: none;
+    padding: 0;
+}
+
+section.sec03 .paging button.active {
+    background: #d4d4d4;
+    width: 15px;
+    height: 15px;
+}
+
+section.sec03 .ctrl_group {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.sec03 .ctrl_group .numbering,
+section.sec03 .ctrl_group .stop,
+section.sec03 .ctrl_group .play {
+    height: 36px;
+    width: 50px;
+    padding: 5px 0px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.sec03 .ctrl_group .stop img,
+section.sec03 .ctrl_group .play img {
+    width: 26px;
+    height: 26px;
+}
